@@ -6,7 +6,7 @@ const projects = [
     title: "NeuroFlow Studio",
     description:
       "Modern AI business website with responsive design and animations.",
-  image: "/neuroflow.png",
+    image: "/neuroflow.png",
     live: "https://neuroflow-studio.netlify.app/",
     github: "https://github.com/muntakindev/neuroflow-studio",
     technologies: ["Next.js", "Tailwind CSS", "React"],
@@ -27,12 +27,10 @@ const projects = [
 
 export default function ProjectPage({
   params,
-}: {
-  params: { slug: string };
-}) {
+}: any) {
 
   const project = projects.find(
-    (p) => p.slug === params.slug
+    (p: any) => p.slug === params.slug
   );
 
   if (!project) {
@@ -48,7 +46,6 @@ export default function ProjectPage({
 
       <div className="max-w-5xl mx-auto">
 
-        {/* Back Button */}
         <Link
           href="/"
           className="inline-block mb-10 border border-white px-5 py-3 rounded-xl hover:bg-white hover:text-black transition"
@@ -56,27 +53,23 @@ export default function ProjectPage({
           ← Back
         </Link>
 
-        {/* Project Image */}
         <img
           src={project.image}
           alt={project.title}
           className="rounded-2xl mb-10 w-full"
         />
 
-        {/* Project Title */}
         <h1 className="text-5xl font-bold mb-8">
           {project.title}
         </h1>
 
-        {/* Project Description */}
         <p className="text-gray-400 text-xl leading-9 mb-10">
           {project.description}
         </p>
 
-        {/* Technologies */}
         <div className="flex gap-4 flex-wrap mb-12">
 
-          {project.technologies.map((tech) => (
+          {project.technologies.map((tech: any) => (
             <div
               key={tech}
               className="border border-gray-700 px-5 py-2 rounded-full"
@@ -87,7 +80,6 @@ export default function ProjectPage({
 
         </div>
 
-        {/* Buttons */}
         <div className="flex gap-5 flex-wrap">
 
           <a
