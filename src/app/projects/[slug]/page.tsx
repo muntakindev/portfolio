@@ -29,8 +29,10 @@ export default function ProjectPage({
   params,
 }: any) {
 
-  const project = projects.find(
-    (p: any) => p.slug === params.slug
+  const slug = params?.slug;
+
+const project = projects.find(
+  (p: any) => p.slug === slug
   );
 
   if (!project) {
