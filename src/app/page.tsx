@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
 
   const skills = [
@@ -9,6 +11,27 @@ export default function Home() {
     "Tailwind CSS",
     "Firebase",
     "GitHub",
+  ];
+
+  // PROJECTS ARRAY
+  const projects = [
+    {
+      title: "NeuroFlow Studio",
+      slug: "neuroflow-studio",
+      description:
+        "Modern AI business website with responsive design and animations.",
+      image:
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    },
+
+    {
+      title: "Portfolio Website",
+      slug: "portfolio-website",
+      description:
+        "Modern responsive portfolio built with Next.js and Tailwind CSS.",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    },
   ];
 
   return (
@@ -138,68 +161,34 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-10">
 
-            <div className="border border-gray-800 bg-zinc-950/50 p-8 rounded-2xl hover:border-white hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+            {projects.map((project) => (
 
-              <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-                alt="Portfolio Website"
-                className="rounded-xl mb-6"
-              />
-
-              <h3 className="text-3xl font-semibold mb-5">
-                Portfolio Website
-              </h3>
-
-              <p className="text-gray-400 text-lg mb-8 leading-8">
-                Modern responsive portfolio built with Next.js and Tailwind CSS.
-              </p>
-
-              <a
-                href="#"
-                className="inline-block border border-white px-5 py-3 rounded-xl hover:bg-white hover:text-black transition"
+              <Link
+                key={project.slug}
+                href={`/projects/${project.slug}`}
               >
-                View Project
-              </a>
 
-            </div>
+                <div className="border border-gray-800 bg-zinc-950/50 p-8 rounded-2xl hover:border-white hover:-translate-y-2 hover:shadow-2xl transition duration-300 cursor-pointer">
 
-            <div className="border border-gray-800 bg-zinc-950/50 p-8 rounded-2xl hover:border-white hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="rounded-xl mb-6"
+                  />
 
-              <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
-                alt="Business Landing Page"
-                className="rounded-xl mb-6"
-              />
+                  <h3 className="text-3xl font-semibold mb-5">
+                    {project.title}
+                  </h3>
 
-              <h3 className="text-3xl font-semibold mb-5">
-                Business Landing Page
-              </h3>
+                  <p className="text-gray-400 text-lg leading-8">
+                    {project.description}
+                  </p>
 
-              <p className="text-gray-400 text-lg mb-8 leading-8">
-                Clean and modern landing page for startups and businesses.
-              </p>
+                </div>
 
-            <div className="flex gap-4">
+              </Link>
 
-  <a
-    href="https://github.com/muntakindev/portfolio"
-    target="_blank"
-    className="inline-block border border-white px-5 py-3 rounded-xl hover:bg-white hover:text-black transition"
-  >
-    GitHub
-  </a>
-
-  <a
-    href="https://muntakin-portfolio.vercel.app"
-    target="_blank"
-    className="inline-block bg-white text-black px-5 py-3 rounded-xl hover:bg-gray-300 transition"
-  >
-    Live Demo
-  </a>
-
-</div>
-
-            </div>
+            ))}
 
           </div>
 
@@ -224,7 +213,7 @@ export default function Home() {
             className="inline-block px-10 py-5 bg-white text-black rounded-full font-semibold hover:bg-gray-300 hover:scale-105 transition duration-300"
           >
             Email Me
-          </a>  
+          </a>
 
         </section>
 
