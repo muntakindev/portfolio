@@ -179,12 +179,25 @@ export default function Home() {
                 Clean and modern landing page for startups and businesses.
               </p>
 
-              <a
-                href="#"
-                className="inline-block border border-white px-5 py-3 rounded-xl hover:bg-white hover:text-black transition"
-              >
-                View Project
-              </a>
+            <div className="flex gap-4">
+
+  <a
+    href="https://github.com/muntakindev/portfolio"
+    target="_blank"
+    className="inline-block border border-white px-5 py-3 rounded-xl hover:bg-white hover:text-black transition"
+  >
+    GitHub
+  </a>
+
+  <a
+    href="https://muntakin-portfolio.vercel.app"
+    target="_blank"
+    className="inline-block bg-white text-black px-5 py-3 rounded-xl hover:bg-gray-300 transition"
+  >
+    Live Demo
+  </a>
+
+</div>
 
             </div>
 
@@ -211,7 +224,7 @@ export default function Home() {
             className="inline-block px-10 py-5 bg-white text-black rounded-full font-semibold hover:bg-gray-300 hover:scale-105 transition duration-300"
           >
             Email Me
-          </a>
+          </a>  
 
         </section>
 
