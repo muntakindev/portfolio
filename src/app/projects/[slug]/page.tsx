@@ -8,7 +8,7 @@ const projects = [
       "Modern AI business website with responsive design and animations.",
   image: "/neuroflow.png",
     live: "https://neuroflow-studio.netlify.app/",
-    github: "https://github.com/muntakindev/neuroflow",
+    github: "https://github.com/muntakindev/neuroflow-studio",
     technologies: ["Next.js", "Tailwind CSS", "React"],
   },
 
