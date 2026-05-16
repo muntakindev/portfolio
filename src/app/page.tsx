@@ -25,13 +25,12 @@ export default function Home() {
     },
 
     {
-      title: "Portfolio Website",
-      slug: "portfolio-website",
+      title: "LuxeStyle Finder",
+      slug: "luxestyle-finder",
       description:
-        "Modern responsive portfolio built with Next.js and Tailwind CSS.",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      live: "/projects/portfolio-website",
+        "Elegant luxury fashion discovery platform with premium UI and responsive shopping experience.",
+      image: "/luxuryfinder.png",
+      live: "https://luxury-style-finder--robiuzzaman5.replit.app/",
     },
   ];
 
