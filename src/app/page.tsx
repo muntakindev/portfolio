@@ -20,7 +20,8 @@ export default function Home() {
       slug: "neuroflow-studio",
       description:
         "Modern AI business website with responsive design and animations.",
-     image: "/neuroflow.png",
+      image: "/neuroflow.png",
+      live: "https://neuroflow-studio.netlify.app",
     },
 
     {
@@ -30,6 +31,7 @@ export default function Home() {
         "Modern responsive portfolio built with Next.js and Tailwind CSS.",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      live: "/projects/portfolio-website",
     },
   ];
 
@@ -162,9 +164,11 @@ export default function Home() {
 
             {projects.map((project) => (
 
-              <Link
+              <a
                 key={project.slug}
-                href={`/projects/${project.slug}`}
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
               >
 
                 <div className="border border-gray-800 bg-zinc-950/50 p-8 rounded-2xl hover:border-white hover:-translate-y-2 hover:shadow-2xl transition duration-300 cursor-pointer">
@@ -185,7 +189,7 @@ export default function Home() {
 
                 </div>
 
-              </Link>
+              </a>
 
             ))}
 
