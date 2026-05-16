@@ -32,6 +32,15 @@ export default function Home() {
       image: "/luxuryfinder.png",
       live: "https://luxury-style-finder--robiuzzaman5.replit.app/",
     },
+
+    {
+      title: "Finora Dashboard",
+      slug: "finora-dashboard",
+      description:
+        "Modern analytics dashboard with premium UI, responsive layout, and interactive data visualization.",
+      image: "/finora-dashboard.png",
+      live: "https://muntakinpr3.netlify.app/",
+    },
   ];
 
   return (
