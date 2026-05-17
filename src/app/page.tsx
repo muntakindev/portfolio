@@ -9,7 +9,11 @@ export default function Home() {
     "React",
     "Next.js",
     "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
     "Firebase",
+    "REST API",
     "GitHub",
   ];
 
@@ -143,7 +147,7 @@ export default function Home() {
             Skills
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
 
             {skills.map((skill) => (
               <div
